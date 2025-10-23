@@ -1,5 +1,23 @@
-flask
-numpy
-pandas
-torch
-transformers
+# Minimal runtime requirements for the current Omega AI CLI application
+# The current `src/` code uses only the Python standard library, so there
+# are no mandatory third-party packages required. Keep this file to document
+# optional dependencies you may want to install later.
+
+# Optional extras (uncomment to use)
+# If you plan to run transformer models locally, uncomment the following
+# and pin versions appropriate for your environment. These libraries are
+# large and may require CUDA/compatible hardware for best performance.
+# transformers>=4.40.0,<5.0.0
+# torch>=2.0.0,<3.0.0
+#
+# Common data and web libraries (only if you need them)
+# numpy>=1.25.0
+# pandas>=2.2.0
+# flask>=2.3.0
+
+# To install only the optional extras you need, create and activate a venv,
+# then run, for example:
+#   pip install "transformers>=4.40.0,<5.0.0" "torch>=2.0.0,<3.0.0"
+
+# When you've installed packages, freeze a lockfile for reproducibility:
+#   pip freeze > requirements.lock.txt
