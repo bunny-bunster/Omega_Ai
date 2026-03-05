@@ -144,17 +144,17 @@ class OmegaAI:
         user_input = user_input.strip().lower()
         if not user_input:
             return "empty"
-        if any(greet in user_input for greet in ["hello", "hi", "hey"]):
+        elif any(greet in user_input for greet in ["hello", "hi", "hey"]):
             return "greeting"
-        if "joke" in user_input:
+        elif "joke" in user_input:
             return "joke"
-        if "fact" in user_input:
+        elif "fact" in user_input:
             return "fact"
-        if "weather" in user_input:
+        elif "weather" in user_input:
             return "weather"
-        if "time" in user_input:
+        elif "time" in user_input:
             return "time"
-        if user_input.endswith("?"):
+        elif user_input.endswith("?"):
             return "question"
         return "statement"
 
