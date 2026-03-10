@@ -144,6 +144,8 @@ class OmegaAI:
         user_input = user_input.strip().lower()
         if not user_input:
             return "empty"
+        elif user_input.endswith("?"):
+            return "question"
         elif any(greet in user_input for greet in ["hello", "hi", "hey"]):
             return "greeting"
         elif "joke" in user_input:
@@ -154,8 +156,6 @@ class OmegaAI:
             return "weather"
         elif "time" in user_input:
             return "time"
-        elif user_input.endswith("?"):
-            return "question"
         return "statement"
 
     def simulate_typing(self):
